@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        String B=sc.next();
+        /* Enter your code here. Print output to STDOUT. */
+        int sum = A.length() + B.length();
+        
+        String flagToCheck = "Yes";
+        if(A.compareTo(B) > 0){
+           flagToCheck = "Yes"; 
+        }else{
+            flagToCheck = "No";
+        }
+        
+        String firstCharOfA = A.substring(0,1);
+        String firstCharOfB = B.substring(0,1);
+        
+        System.out.println(sum);
+        System.out.println(flagToCheck);
+        System.out.println(firstCharOfA.toUpperCase()+ A.substring(1) + " " +firstCharOfB.toUpperCase()+ B.substring(1));
+        
+    }
+}
